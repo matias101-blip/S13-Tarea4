@@ -38,3 +38,63 @@
   - Primos Gemelos
     - Los Primos gemelos son 2 numeros que son primo y que entre ellos su diferencia es 2, Ejemplo 3 y 5 son primos y entre ellos su diferencia es 2.
     - Consejo usar un if con && y usar la funcion de "Primo" anterior.
+
+#### Cadenas
+  - Concatenar dos cadenas
+    - Unir dos frases en una sola variable
+  - Buscar una subcadena
+    - Dentro de una cadena buscar si la subcadena se en cuentra, ejemplo:
+    - ```js
+      Cadena = "Hola que tal" //Esta es la cadena principal.
+      Subcadena = "que" //Esta es la cadena que debemos en contrar en la cadena principal.
+      /*Si encontramos la cadena, re tornamos su pocicion es decir,
+      si en la "Subcadena" la "Subcadena[0] (Vendria a ser "q")
+      se en cuentra en la "Cadena" la cual si esta que es "Cadena[6](Vendria a ser la "q") entonces lo que
+      retornamos es "6" que vendria a ser la pocicion,
+      recordar que deben verificar los demas elementos de
+      la "Subcadena"*/
+      //Para resolver se usa un if y un for para iterar en la cadena.
+  - Insertar una cadena
+    - En una cadena debemos insertar una subcadena. (Ojo no es concatenar)
+    -  ```js
+        Cadena = "Hola mundo" //Esta es la cadena principal
+        Subcadena = "hermoso" // Esta es la cadena que insertaremos
+        /* Cuando vamos a insertar una cadena necesitamos
+        una varible de auxiliar para poder inserta la subcadena (Ya que la cadena principal no se puede modificar)
+        para eso necesitamos una pocicion en la cual se
+        insertara la subcadena.  */
+        var Nueva_cadena; //Esta sera la cadena que nos ayudara.
+  - Eliminar una subcadena
+    - Encontrar una subcadena y eliminarla de la cadena principal.
+    - Aqui usaremos el mismo concepto de "insertar una cadena" refireindonos a guardar la operacion en una cadena, usaremos la funcion de buscar para en contrar la subacdena y haci eliminarla en la pocision que se encuentra en la cadena principal.
+  - Convertir un arreglo en cadena.
+    -  Utilizar una de las funciones de js para convertir un arreglo en una cadena.
+#### Arreglos
+  - Mayor de un arreglo
+    - Buscar el numero mayor que este en un arreglo ( tbm puede servir con cadenas).
+  - Buscar Arreglo
+    - Buscar un elemento en un arreglo
+    - Para esto se necesita el objetivo en una variable, un for y if.
+  - Insertar arreglo
+    - Insertar elemento en un arreglo, esto se puede conseguir con la funcion push
+  - Eliminar arreglo
+    - Eliminar un elemento especifico  del arreglo.
+    - Aqui se reutiliza la funcion de "Buscar arreglo"
+  - Convertir Cadena en arreglo
+    - Aqui se usa la funcion split, toca pasar los puntos de interupcion para decirle donde corta.
+  - Bases
+    - 10 a base 2
+    - 10 a base 8
+    - 10 a base 16
+    - 2 a base 10
+    - 2 a base 8
+    - 2 a base 16
+
+Esos vendrian hacer los ejercicios que hay que hacer.
+consejo: Mantener ordenada las carpetas y tener una structura, pueden guiarse con la structura de este proyecto.
+- Carpeta_Principal
+  - [Styles](style) : Carpeta donde se almacenan los estilos css
+  - [Script](script) : Carpeta donde se almacenan los archivos js
+  - [Img](img) : Carpeta : donde se almacenan las imagenes.
+  - [Templates o Pagues](template) : Donde se almacenan los demas archivos html
+  - [Index](index.html) : Esta vendria hacer el archivo principal del proyecto.
