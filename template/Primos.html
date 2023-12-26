@@ -1,25 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numeros Primos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../style/normalize.css">
+  <link rel="stylesheet" href="../style/skeleton.css">
+  <link rel="stylesheet" href="../style/Base.css">
+  <title>Divisores</title>
 </head>
 
 <body>
-    <div>
-        <h2>Verificar si un número es primo</h2>
-
-        <p>ingresa un número:</p>
-
-        <input id="num" type="number">
-
-        <button onclick="NumPrimo()">Verificar</button>
-
-        <p id="resultado"></p>
+  <div class="container">
+    <div class="header">
+      <h1>Primos</h1>
     </div>
-    <script src="../script/Primos.js"></script>
+    <div class="Seccion1">
+      <div class="row">
+        <h2>El numero es primo?</h2>
+        <p>Se verificara si un numero es primo o no.</p>
+        <div class="carteles Input eight columns">
+          <label for="input_Primo">Numero</label>
+          <input type="number" placeholder="Ingrese un numero..." id="input_Primo">
+        </div>
+      </div>
+      <div class="buttons row">
+        <button onclick="">Aceptar</button>
+      </div>
+    </div>
+    <div class="Seccion2">
+      <div class="row">
+        <div class="header">
+          <h1>Primos Gemelos</h1>
+        </div>
+        <div class="six columns carteles">
+          <label for="input_Perfect">Ingrese un numero 1: </label>
+          <input type="number" id="input_primog1" placeholder="Ingrese un numero">
+        </div>
+        <div class="six columns carteles">
+          <label for="input_Perfect">Ingrese un numero 2: </label>
+          <input type="number" id="input_primog2" placeholder="Ingrese un numero">
+        </div>
+      </div>
+      <div class="row buttons">
+        <button onclick="SumaDeDivisoresOPerfecto()"type="button" name="button">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../script/Mensajes.js" charset="utf-8"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
 </body>
 
 </html>
