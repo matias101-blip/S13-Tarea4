@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/normalize.css">
+  <link rel="stylesheet" href="../style/skeleton.css">
+  <link rel="stylesheet" href="../style/Base.css">
+  <title>Concatenar dos cadenas</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header hero">
+      <h1>Cadenas</h1>
+    </div>
+    <div class="seccion">
+      <div class="row">
+        <h2>Mayor de un arreglo</h2>
+      </div>
+      <div class="row">
+        <div class="five columns carteles">
+          <label for="numeros">Ingrese números separados por comas</label>
+          <input type="text" id="numeros" placeholder="Ejemplo: 3, 8, 1, 5">
+        </div>
+        <div class="buttons row">
+          <button onclick="encontrarMayor()">Encontrar Mayor</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección Buscar Arreglo -->
+    <div class="seccion">
+      <div class="row">
+        <h2>Buscar Arreglo</h2>
+      </div>
+      <div class="row">
+        <div class="five columns carteles">
+          <label for="buscarNumero">Ingrese un número a buscar</label>
+          <input type="text" id="buscarNumero" placeholder="Ingrese un número">
+        </div>
+        <div class="buttons row">
+          <button onclick="buscarElemento()">Buscar Número</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección Insertar Arreglo -->
+    <div class="seccion">
+      <div class="row">
+        <h2>Insertar Arreglo</h2>
+      </div>
+      <div class="row">
+        <div class="five columns carteles">
+          <label for="insertarNumero">Ingrese un número a insertar</label>
+          <input type="text" id="insertarNumero" placeholder="Ingrese un número">
+        </div>
+        <div class="buttons row">
+          <button onclick="insertarElemento()">Insertar Número</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección Eliminar Arreglo -->
+    <div class="seccion">
+      <div class="row">
+        <h2>Eliminar Arreglo</h2>
+      </div>
+      <div class="row">
+        <div class="five columns carteles">
+          <label for="eliminarNumero">Ingrese un número a eliminar</label>
+          <input type="text" id="eliminarNumero" placeholder="Ingrese un número">
+        </div>
+        <div class="buttons row">
+          <button onclick="eliminarElemento()">Eliminar Número</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección Convertir Cadena en Arreglo -->
+    <div class="seccion">
+      <div class="row">
+        <h2>Convertir Cadena en Arreglo</h2>
+      </div>
+      <div class="row">
+        <div class="five columns carteles">
+          <label for="cadenaConvertir">Ingrese una cadena</label>
+          <input type="text" id="cadenaConvertir" placeholder="Ingrese una cadena">
+        </div>
+        <div class="five columns">
+          <label for="delimitador">Ingrese un delimitador</label>
+          <input type="text" id="delimitador" placeholder="Ingrese un delimitador">
+        </div>
+        <div class="buttons row">
+          <button onclick="convertirCadenaAArreglo()">Convertir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../script/Mensajes.js" charset="utf-8"></script>
+  <script src="../script/Arreglos.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+</body>
+
+</html>
