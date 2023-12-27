@@ -83,9 +83,39 @@
         <button onclick="Eliminar()">Eliminar</button>
       </div>
     </div>
+    <div class="seccion">
+      <div class="five columns">
+        <h3>Lista</h3>
+        <div class="row">
+          <div class="five columns">
+            <label for="">Ingrese un item</label>
+          </div>
+        </div>
+        <div class="row">
+          <div id="div_add" class="five columns div_add">
+            <input type="text" id="input_ac" placeholder="Ingrese un item">
+            <button onclick="agregarElemento()" type="button" name="button">Añadir</button>
+          </div>
+        </div>
+        <div class="row">
+          <ul id="lista">
+          </ul>
+        </div>
+      </div>
+      <div class="five columns">
+        <h3>Cadena:</h3>
+        <h4 id="cadena_c"></h4>
+      </div>
+      <div class="row">
+        <div class="buttons">
+          <button onclick="convertirCadena()" type="button" name="button">Convertir</button>
+        </div>
+      </div>
+    </div>
   </div>
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../script/Mensajes.js" charset="utf-8"></script>
   <script src="../script/Cadenas.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>

@@ -1,12 +1,13 @@
 function concatenar(){
-    var cadena1 
-    var cadena2 
+    var cadena1
+    var cadena2
     cadena1 = document.getElementById("cadena1").value
     cadena2 = document.getElementById("cadena2").value
     var resultado = cadena1 + cadena2;
     Mensaje(resultado);
 }
 
+//Arreglar este error con arreglos
 function buscar_subcadena(cadena_b, subcadenas){
     var input
     if (cadena_b == undefined){
@@ -17,10 +18,10 @@ function buscar_subcadena(cadena_b, subcadenas){
         input = true
     }
     var pos;
-    for (let i = 0; i < cadena_b.length; i++){ 
+    for (let i = 0; i < cadena_b.length; i++){
         caracter = cadena_b[i]
         if (caracter == subcadenas[0]) {
-            pos = i 
+            pos = i
             var i2 = i
             for (let i3 = 1; i3 < subcadenas.length; i3 ++) {
                 i2 = i2 + 1
@@ -36,7 +37,7 @@ function buscar_subcadena(cadena_b, subcadenas){
         return pos;
     }
 }
-    
+
 function Insertar(){
     var input = document.getElementById("cadena_i");
     var insertar = document.getElementById("insertar");
@@ -60,6 +61,44 @@ function Eliminar(){
         Nueva_cadena = Nueva_cadena + cadena_b[i]
     }
 
-    Mensaje(`Esta es la nueva cadena ${Nueva_cadena}`);
+    alert(`Esta es la nueva cadena ${Nueva_cadena}`);
 
+}
+
+var items = [];
+
+
+function agregarElemento() {
+  var inputElement = document.getElementById('input_ac');
+  var inputValue = inputElement.value.trim();
+
+  if (inputValue !== '') {
+
+    items.push(inputValue);
+
+
+    inputElement.value = '';
+
+
+    actualizarLista();
+  }
+}
+
+function convertirCadena() {
+  debugger
+  var cadenaC = items.join(', ');
+  document.getElementById('cadena_c').textContent = cadenaC;
+}
+
+
+function actualizarLista() {
+  var listaElement = document.getElementById('lista');
+  listaElement.innerHTML = '';
+
+
+  items.forEach(function (item) {
+    var liElement = document.createElement('li');
+    liElement.textContent = item;
+    listaElement.appendChild(liElement);
+  });
 }

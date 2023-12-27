@@ -16,3 +16,17 @@
 .seccion{
   margin-bottom: 4em;
 }
+
+#input_ac{
+  width: 8em;
+  margin-right: 7px;
+}
+
+#div_add{
+  display: flex;
+}
+
+#div_add button{
+  text-align: justify;
+  text-size-adjust: auto;
+}
