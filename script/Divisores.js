@@ -2,7 +2,6 @@
 const input_Divisores = document.getElementById("input_Div");
 const input_Perfect = document.getElementById("input_Perfect");
 function Divisores_f(numero) {
-    var numero;
     var input;
     if (numero == undefined) {
         input = false;

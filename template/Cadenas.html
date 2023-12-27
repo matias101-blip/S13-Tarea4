@@ -34,17 +34,53 @@
         <h2>Buscar subcadena</h2>
       </div>
       <div class="row">
-        <div class="five colums">
+        <div class="four columns">
           <label for="">Ingrese una cadena</label>
           <input type="text" id="cadena_b" placeholder="Ingrese una cadena">
         </div>
-        <div class="five colums">
-          <label for="">Ingrese una subcaneda a buscar</label>
+        <div class="five columns">
+          <label for="">Ingrese una subcadena a buscar</label>
           <input type="text" id="subcadenas" placeholder="subcadenas">
         </div>
       </div>
-      <div class="button row">
-        <button >Buscar</button>
+      <div class="buttons row">
+        <button onclick="buscar_subcadena()">Buscar</button>
+      </div>
+    </div>
+    <div class="seccion">
+      <div class="row">
+        <h2>Insertar subcadena</h2>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <h3>Cadena:</h3>
+          <label for="">Hola que tal <span id="insertar"></span></label>
+        </div>
+        <div class="five columns">
+          <label for="">Ingrese una subcadena</label>
+          <input type="text" id="cadena_i" placeholder="Ingrese una frase">
+        </div>
+      </div>
+      <div class="buttons row">
+        <button onclick="Insertar()">Insertar</button>
+      </div>
+    </div>
+    <div class="seccion">
+      <div class="row">
+        <h2>Eliminar subcadena</h2>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <label for="">Ingrese una cadena</label>
+          <input type="text" id="cadena_e" placeholder="Ingrese una cadena">
+        </div>
+        <div class="five columns">
+          <label for="">Ingrese una subcadena a eliminar</label>
+          <input type="text" id="subcadena_e" placeholder="Ingrese una cadena">
+        </div>
+      </div>
+      <div class="buttons row">
+        <button onclick="Eliminar()">Eliminar</button>
       </div>
     </div>
   </div>
