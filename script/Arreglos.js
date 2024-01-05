@@ -1,83 +1,45 @@
-function encontrarMayor() {
-  const numerosString = document.getElementById('numeros').value;
-  const numeros = numerosString.split(',').map(Number);
-
-  if (numeros.length === 0) {
-    alert('Ingrese al menos un número.');
-    return;
-  }
-
-  const mayor = Math.max(...numeros);
-  alert('El número mayor es: ' + mayor);
+"use strict";
+//Funcion que busca elementos en un arreglo
+function buscarArreglo(arreglo, elemento) {
+    debugger;
+    var encontrado = false;
+    var pos;
+    for (let i = 0; i < arreglo.length; i++) {
+        var objetivo = arreglo[i];
+        if (objetivo === elemento) {
+            pos = i;
+        }
+    }
+    if (pos == undefined) {
+        console.log("No se encontro en el arreglo");
+    }
+    else {
+        encontrado = true;
+        console.log(`El elemento si se encuantra en el arreglo y esta en la ${pos}`);
+    }
+    return {
+        encontrado: encontrado,
+        pos: pos
+    };
 }
-
-function buscarElemento() {
-  const numeroBuscado = parseInt(document.getElementById('buscarNumero').value, 10);
-
-  if (isNaN(numeroBuscado)) {
-    alert('Ingrese un número válido.');
-    return;
-  }
-
-  const numerosString = document.getElementById('numeros').value;
-  const numeros = numerosString.split(',').map(Number);
-
-  const encontrado = numeros.includes(numeroBuscado);
-
-  if (encontrado) {
-    alert('Número encontrado en el arreglo.');
-  } else {
-    alert('Número no encontrado en el arreglo.');
-  }
+//Funcion que elimina elementos en un arreglo
+function Eliminar(arreglo, elemento) {
+    var nuevoArreglo = [];
+    const { encontrado, pos } = buscarArreglo(arreglo, elemento);
+    if (encontrado) {
+        for (let i = 0; i < arreglo.length; i++) {
+            if (arreglo[i] != elemento) {
+                nuevoArreglo.push(arreglo[i]);
+            }
+        }
+        console.log(`El elemento de la pocision ${pos} fue eliminado`);
+        return nuevoArreglo;
+    }
+    else {
+        console.log("El elemento no se encuantra en el arreglo");
+    }
 }
-
-function insertarElemento() {
-  const numeroInsertar = parseInt(document.getElementById('insertarNumero').value, 10);
-
-  if (isNaN(numeroInsertar)) {
-    alert('Ingrese un número válido.');
-    return;
-  }
-
-  const numerosString = document.getElementById('numeros').value;
-  const numeros = numerosString.split(',').map(Number);
-
-  numeros.push(numeroInsertar);
-
-  document.getElementById('numeros').value = numeros.join(', ');
-}
-
-function eliminarElemento() {
-  const numeroEliminar = parseInt(document.getElementById('eliminarNumero').value, 10);
-
-  if (isNaN(numeroEliminar)) {
-    alert('Ingrese un número válido.');
-    return;
-  }
-
-  const numerosString = document.getElementById('numeros').value;
-  const numeros = numerosString.split(',').map(Number);
-
-  const index = numeros.indexOf(numeroEliminar);
-
-  if (index !== -1) {
-    numeros.splice(index, 1);
-    document.getElementById('numeros').value = numeros.join(', ');
-    alert('Número eliminado del arreglo.');
-  } else {
-    alert('Número no encontrado en el arreglo.');
-  }
-}
-
-function convertirCadenaAArreglo() {
-  const cadena = document.getElementById('cadenaConvertir').value;
-  const delimitador = document.getElementById('delimitador').value;
-
-  if (cadena === '' || delimitador === '') {
-    alert('Ingrese una cadena y un delimitador.');
-    return;
-  }
-
-  const arreglo = cadena.split(delimitador);
-  alert('Cadena convertida a arreglo: ' + arreglo);
+function Insertar(arreglo, elemento) {
+    arreglo.push(elemento);
+    console.log('El elemento fue insertado');
 }

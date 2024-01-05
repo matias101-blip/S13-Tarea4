@@ -1,3 +1,4 @@
+var encontrado
 function concatenar(){
     var cadena1
     var cadena2
@@ -27,6 +28,7 @@ function buscar_subcadena(cadena_b, subcadenas){
                 i2 = i2 + 1
                 if (cadena_b[i2] != subcadenas[i3]){
                     pos = 0
+                    encontrado = false
                 }
             }
         }
